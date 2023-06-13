@@ -28,15 +28,15 @@ router.beforeEach((to, form) => {
 <template>
   <main class="h-screen">
     <!-- Navbar -->
-    <div class="sticky top-0 bg-white z-10">
-      <div class="h-20 border-b">
+    <div class="bg-white z-10">
+      <div class="sticky top-0 h-20 border-b border-[#000000] ">
         <Navbar/>
       </div>
     </div>
 
     <!-- Content -->
-    <div class="bg-fixed bg-center" style="background-image: url(https://m1r.ai/9/x6jte.png)" >
-      <div class="animate__animated animate__fadeInDown">
+    <div class="bg-fixed bg-center min-h-screen" style="background-image: url(https://m1r.ai/9/x6jte.png)" >
+      <div class="animate__animated animate__fadeInUp">
         <router-view v-slot="{ Component }">
           <component :is="Component" />
         </router-view>
@@ -44,8 +44,8 @@ router.beforeEach((to, form) => {
     </div>
 
     <!-- Footer -->
-    <div class="sticky top-[100vh] h-20 border-t">
-      <Footer class="bg-white z-10" />
+    <div class="sticky top-[100vh] h-20 border-t border-[#000000]">
+      <Footer class="bg-white z-10"/>
     </div>
   </main>
 </template>
